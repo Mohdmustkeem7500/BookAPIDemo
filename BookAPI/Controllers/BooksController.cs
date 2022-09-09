@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BookAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]")]  
     [ApiController]
     public class BooksController : ControllerBase
     {
@@ -32,7 +32,7 @@ namespace BookAPI.Controllers
             return await _bookRepository.Get(id);
         }
 
-        [HttpPost]
+        [HttpPost] 
         public async Task<ActionResult<Book>> PostBooks([FromBody] Book book)
         {
             var newBook = await _bookRepository.Create(book);
